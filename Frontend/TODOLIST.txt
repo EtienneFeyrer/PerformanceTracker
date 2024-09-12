@@ -1,0 +1,8 @@
+To do  
+-rank the entries in the table of totalMileage /done
+-create a trigger for updating the new tables /done
+-Connect the new Tables with the performance.js file
+-outsource the returndailyMileage into app
+-create a new dispaly of the CO2 footprint
+-path for batch files to update the server tables
+C:\Users\Dell\Documents\SQL Server Management Studio\batch files for updating the student Table

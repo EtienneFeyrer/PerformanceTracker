@@ -1,0 +1,9 @@
+/* DateComponent.css */
+.custom-daypicker-root {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Custom shadow */
+    padding: 20px; /* Custom padding */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    background-color: white; /* Background color to ensure visibility */
+    border-radius: 8px; /* Optional: Rounded corners for a nicer look */
+  }
+  
