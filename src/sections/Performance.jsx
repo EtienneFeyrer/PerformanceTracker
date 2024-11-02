@@ -48,6 +48,7 @@ const Performance = ({username, returnData2}) => {
    padding: 10px;
    color: #Ff4040;}`
 
+   //implement function which will receive the set-return date computes boolean weather it should set the day selected or not if yes display as handeled in the footer if not return date cannot be selceted out of availability
   
   return (
     <section 
