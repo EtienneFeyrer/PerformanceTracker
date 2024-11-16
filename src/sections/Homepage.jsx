@@ -52,7 +52,7 @@ const Homepage = ({ username, DailyMileage, MonthlyMileage, TotalMileage, return
 
             </div>
             <div className="App">
-                <ChartComponent kilometers={getPerformanceToday(getID(Username, returnData2), DailyMileage)} />
+                <ChartComponent kilometers={getPerformanceMonth(getID(Username, returnData2), MonthlyMileage)} />
             </div>
             <div className='spacer'>
               
