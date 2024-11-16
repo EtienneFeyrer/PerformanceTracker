@@ -1,0 +1,27 @@
+.diagram-box {
+    border: 2px solid #000;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.diagram-content {
+    padding-top: 50vh; /* Adjust the value to achieve the desired padding */
+    padding-bottom: 50vh; /* Adjust the value to achieve the desired padding */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+canvas {
+    width: 300px;
+    height: 300px;
+}
+.spacer {
+    height: 25vh; /* Adjust the value to achieve the desired padding */
+}
