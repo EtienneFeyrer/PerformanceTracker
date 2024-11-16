@@ -1,0 +1,18 @@
+USE [student_tables]
+GO
+/****** Object:  Table [dbo].[StudentMileageSummaryPerMonth]    Script Date: 11/16/2024 5:31:27 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[StudentMileageSummaryPerMonth](
+	[Student_ID] [int] NOT NULL,
+	[ENTRY_Date] [date] NOT NULL,
+	[Mileage] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Student_ID] ASC,
+	[ENTRY_Date] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
