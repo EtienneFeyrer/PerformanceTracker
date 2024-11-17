@@ -6,10 +6,10 @@ const getStudents = async () => {
     try {
         let pool = await sql.connect(config);
         let students = await pool.request().query('SELECT * FROM users')
-        console.log(students);
+        {/*console.log(students);*/}
         return students;
     } catch (error) {
-        console.log(error);
+        {/*console.log(error);*/}
     }
 }
 
@@ -30,7 +30,7 @@ const createStudent = async (student) => {
         // Disable IDENTITY_INSERT
         await request.query('SET IDENTITY_INSERT users OFF');
 
-        console.log(result);
+        {/*console.log(result);*/}
         return result;
     } catch (error) {
         console.error('Error creating student:', error);
@@ -43,7 +43,7 @@ const getMileage = async () => {
     try {
         let pool = await sql.connect(config);
         let mileage = await pool.request().query('SELECT * FROM Mileage')
-        console.log(mileage);
+        {/*console.log(mileage);*/}
         return mileage;
     } catch (error) {
         console.log(error);
@@ -68,7 +68,7 @@ const createMileage = async (mileage) => {
         // Disable IDENTITY_INSERT
         await request.query('SET IDENTITY_INSERT Mileage OFF');
 
-        console.log(result);
+        {/*console.log(result);*/}
         return result;
     } catch (error) {
         console.error('Error creating Mileage:', error);
@@ -79,7 +79,7 @@ const getMileageDaily = async () => {
     try {
         let pool = await sql.connect(config);
         let dailymileage = await pool.request().query('SELECT * FROM StudentMileageSummaryPerDay' )
-        console.log(dailymileage);
+        {/*console.log(dailymileage);*/}
         return dailymileage;
     } catch (error) {
         console.log(error);
@@ -90,7 +90,7 @@ const getMileageMonthly = async () => {
     try {
         let pool = await sql.connect(config);
         let Monthlymileage = await pool.request().query('SELECT * FROM StudentMileageSummaryPerMonth' )
-        console.log(Monthlymileage);
+        {/*console.log(Monthlymileage);*/}
         return Monthlymileage;
     } catch (error) {
         console.log(error);
@@ -101,7 +101,7 @@ const getMileageTotal = async () => {
     try {
         let pool = await sql.connect(config);
         let Totalmileage = await pool.request().query('SELECT * FROM StudentMileageSummaryTotal' )
-        console.log(Totalmileage);
+        {/*console.log(Totalmileage);*/}
         return Totalmileage;
     } catch (error) {
         console.log(error);

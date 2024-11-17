@@ -14,7 +14,7 @@ const Performance = ({username, returnData2}) => {
 
   useEffect(() => {
     if (username) {
-      console.log("ReturnData2" , returnData2);
+      {/*console.log("ReturnData2" , returnData2);*/}
       setUsername(username);
     localStorage.setItem('username', username);
   };
@@ -24,8 +24,8 @@ const Performance = ({username, returnData2}) => {
   const [selected, setSelected] = useState(new Date());
 
   const handleDayClick = () => {
-    console.log("Selected day:", selected);
-    console.log(returnData2);
+    {/*console.log("Selected day:", selected);*/}
+    {/*console.log(returnData2);*/}
   };
 
   const css = `
@@ -56,7 +56,7 @@ const Performance = ({username, returnData2}) => {
       <style>{css}</style>
       <h1 className="text-xl text-center font-montserrat text-slate-gray font-semibold mt-4"
       >
-        Select a Date {Username}!
+        Wähle ein Datum {Username}!
       </h1>
       
       <div className="mt-5 ">
@@ -84,7 +84,7 @@ const Performance = ({username, returnData2}) => {
       </div>
       
            
-          <div className="mt-7 text-center"> Track your todays performance! </div>
+          <div className="mt-7 text-center"> Trage deine heutige Leistung ein! </div>
           <div className="mt-2">
             <PerformanceInput username={Username} returnData2 ={returnData2} date ={selected}/>
           </div>

@@ -46,23 +46,22 @@ export const getPerformanceToday = (StudentId, DailyMileage) => {
 }
 
 export const getPerformanceMonth = (studentId, monthlyMileage) => {
-    console.log("MonthlyMileage:", monthlyMileage);
+    console.log("MonthlyMileage2:", monthlyMileage);
     const today = new Date();
     const currentMonth = today.getMonth() + 1; // Months are zero-based, so add 1
+    const currentYear = today.getFullYear();   // Get the current year
 
-    // Function to check if the entry date is in the current month
+    // Function to check if the entry date is in the current month and year
     const isCurrentMonth = (entryDate) => {
-        const entryMonth = new Date(entryDate).getMonth() + 2;
-        // console.log(`Entry Date: ${entryDate}, Entry Month: ${entryMonth}, Is Current Month: ${entryMonth === currentMonth}`);
-        return entryMonth === currentMonth;
+        const entryDateObj = new Date(entryDate);
+        const entryMonth = entryDateObj.getMonth() + 1;
+        const entryYear = entryDateObj.getFullYear();
+        return entryMonth === currentMonth && entryYear === currentYear;
     };
 
     const entriesForMonth = monthlyMileage.filter(entry => {
         const isCurrent = isCurrentMonth(entry.ENTRY_Date);
         const isStudentMatch = entry.Student_ID === studentId;
-        //console.log("Entry Date:", entry.ENTRY_Date);
-        //console.log("Is it the current month:", isCurrent);
-        //console.log("Student ID matches:", isStudentMatch);
         return isCurrent && isStudentMatch;
     });
 
@@ -72,12 +71,10 @@ export const getPerformanceMonth = (studentId, monthlyMileage) => {
         return "Wait until Monthly Mileage is updated";
     } else {
         const firstEntry = entriesForMonth[0];
-        //console.log("StudentId (Monthly):", studentId);
-        //console.log("First Entry (Monthly):", firstEntry);
-        //console.log("First Entry Student ID (Monthly):", firstEntry.Student_ID);
         return firstEntry.Mileage;
     }
 };
+
 
 export const getSpot = (Student_ID, TotalMileage) => {const matchingEntries = TotalMileage.filter(mileage => mileage.Student_ID === Student_ID);
 if(matchingEntries.length > 1){

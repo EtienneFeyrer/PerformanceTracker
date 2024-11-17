@@ -6,3 +6,6 @@ To do
 -create a new dispaly of the CO2 footprint
 -path for batch files to update the server tables
 C:\Users\Dell\Documents\SQL Server Management Studio\batch files for updating the student Table
+-npm install chart.js react-chartjs-2 package for the chart
+
+

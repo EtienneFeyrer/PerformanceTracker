@@ -25,34 +25,34 @@ const Homepage = ({ username, DailyMileage, MonthlyMileage, TotalMileage, return
 
     return (
         <section>
-            <h1 className="text-2xl font-palanquin font-semibold text-slate-gray">Welcome Back {Username}</h1>
+            <h1 className="text-2xl font-palanquin font-semibold text-slate-gray">Wilkommen zurück {Username}</h1>
             <p className="text-slate-gray">
                 <DateComponent />
             </p>
             <div className="mt-5 text-slate-gray font-palanquin">
-                Your current Place on the Leaderboard: <span className="border border-coral-red rounded-full w-max inline-block">
+                Deine Platzierung: <span className="border border-coral-red rounded-full w-max inline-block">
                     {getSpot(getID(Username, returnData2), TotalMileage)}
                 </span>
             </div>
             <p className="text-slate-gray font-palanquin">
-                Performance today: <span className="border border-coral-red rounded-full w-max inline-block mt-2">
+                Leistung heute: <span className="border border-coral-red rounded-full w-max inline-block mt-2">
                     {getPerformanceToday(getID(Username, returnData2), DailyMileage)}
                 </span>
             </p>
             <p className="text-slate-gray font-palanquin mt-2">
-                Performance this month:
+                Leistung diesen Monat:
                 <span className="border border-coral-red rounded-full w-max inline-block">
                     {getPerformanceMonth(getID(Username, returnData2), MonthlyMileage)}
                 </span>
             </p>
             <div className="mt-5">
-                <Button label="+ Add Performance" onClick={handleAddPerformance} />
+                <Button label="+ Leistung" onClick={handleAddPerformance} />
             </div>
             <div className='spacer'>
 
             </div>
             <div className="App">
-                <ChartComponent kilometers={getPerformanceToday(getID(Username, returnData2), DailyMileage)} />
+                <ChartComponent kilometers={getPerformanceMonth(getID(Username, returnData2), MonthlyMileage)} />
             </div>
             <div className='spacer'>
               
