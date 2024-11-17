@@ -12,8 +12,8 @@ const Login = ({ setUsername, username, returnData2 }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('Username:', username);
-    console.log('Password:', password);
+    {/*console.log('Username:', username);*/}
+    {/*console.log('Password:', password);*/}
   }, [username, password]);
 
   const handleUsernameChange = (e) => { setUsername(e.target.value); };
@@ -22,11 +22,11 @@ const Login = ({ setUsername, username, returnData2 }) => {
 
   const handleSubmit = () => {
     const loginResult = login2(returnData2, username, password);
-    console.log(loginResult);
-    console.log('Form submitted');
+    {/*console.log(loginResult);*/}
+    {/*console.log('Form submitted');*/}
     
     if (loginResult.success) {
-      console.log('try open page');
+      {/*console.log('try open page');*/}
       setUsername(username);
       navigate('/homepage');
     } else {
@@ -36,13 +36,13 @@ const Login = ({ setUsername, username, returnData2 }) => {
 
   return (
     <section>
-      <h1 className='text-3xl flex items-center font-montserrat text-coral-red'>Login</h1>
-      <UserInput placeholder='student@mail.com' value={username} onChange={handleUsernameChange} />
+<h1 className='text-3xl flex items-center font-montserrat text-coral-red' style={{ paddingLeft: '2em' }}>Anmeldung</h1>
+<UserInput placeholder='student@mail.com' value={username} onChange={handleUsernameChange} />
       <div className='mt-5'>
-        <PasswordInput placeholder='password' value={password} onChange={handlePasswordChange} />
+        <PasswordInput placeholder='Passwort' value={password} onChange={handlePasswordChange} />
       </div>
       <div className='mt-5'>
-        <Button label='SIGN IN' onClick={handleSubmit} />
+        <Button label='anmelden' onClick={handleSubmit} />
       </div>
       <div className='flex text-center text-coral-red items-center justify-center text-xl'>
         {errorMessage && <Display todisplay={errorMessage} />} {/* Display error message if present */}

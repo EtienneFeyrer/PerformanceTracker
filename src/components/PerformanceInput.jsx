@@ -17,7 +17,7 @@ const PerformanceInput = ({ username, returnData2, date }) => {
 
   const fetchPerformance = async () => {
     const mileageObject = new Mileage(getID(username, returnData2), formattedDate, performance);
-    console.log('Mileage Object:', JSON.stringify(mileageObject));
+    {/*console.log('Mileage Object:', JSON.stringify(mileageObject));*/} //for testing purpose
     try {
       const response = await fetch('http://localhost:5000/mileage', {
         method: 'POST',
@@ -28,7 +28,7 @@ const PerformanceInput = ({ username, returnData2, date }) => {
         body: JSON.stringify(mileageObject)
       });
       const data = await response.json();
-      console.log('Response Data:', data);
+      {/*console.log('Response Data:', data);*/} //for testing purpose
       setSuccessMessage('Stored successfully'); // Set success message on successful fetch
       setPerformance(''); // Clear the input field on successful transaction
     } catch (error) {
@@ -39,23 +39,23 @@ const PerformanceInput = ({ username, returnData2, date }) => {
 
   const handleClick = () => {
     const dateValidationMessage = validateDate(formattedDate);
-    console.log('Formatted Date:', formattedDate);
+    {/*console.log('Formatted Date:', formattedDate);*/} //for testing purpose
     if (dateValidationMessage !== 'Valid date') {
       setSuccessMessage(dateValidationMessage);
       return;
     }
 
-    console.log('Performance:', performance);
-    console.log('Username:', Username);
-    console.log("returnData2", returnData2);
-    console.log(new Mileage(getID(Username, returnData2), formattedDate, performance));
+    {/*console.log('Performance:', performance);*/} //for testing purpose
+    {/*console.log('Username:', Username);*/} //for testing purpose
+    {/*console.log("returnData2", returnData2);*/} //for testing purpose
+    {/*console.log(new Mileage(getID(Username, returnData2), formattedDate, performance));*/} //for testing purpose
     fetchPerformance();
   };
 
   return (
     <div>
-      <UserInput value={performance} placeholder="Enter your performance (in kilometers)" onChange={handleChangePerformance} />
-      <Button label={'Add Performance'} onClick={handleClick}>PerformanceInput</Button>
+      <UserInput value={performance} placeholder="Leistung in Kilometern" onChange={handleChangePerformance} />
+      <Button label={'Speicher Leistung'} onClick={handleClick}>Leistungs-Eingabe</Button>
       {successMessage && 
         <p style={{ color: successMessage === 'Stored successfully' ? 'green' : 'red' }}>
           {successMessage}

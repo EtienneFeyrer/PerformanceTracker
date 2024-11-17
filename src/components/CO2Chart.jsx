@@ -21,9 +21,9 @@ const ChartComponent = ({ kilometers }) => {
         chartInstance.current = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Bus', 'Train', 'Car'],
+                labels: ['Bus', 'Zug', 'Auto'],
                 datasets: [{
-                    label: 'CO₂ savings (kg)',
+                    label: 'erspartes CO₂ (kg)',
                     data: co2Savings,
                     backgroundColor: [
                         'rgba(75, 192, 192, 0.2)',
@@ -55,7 +55,7 @@ const ChartComponent = ({ kilometers }) => {
 
     return (
         <div className="diagram-box">
-            <h2>Chart of saved CO₂ current month:</h2>
+            <h2>Diagramm gespartes CO₂ diesen Monats:</h2>
             <div className="charts">
                 <canvas ref={chartRef} />
             </div>

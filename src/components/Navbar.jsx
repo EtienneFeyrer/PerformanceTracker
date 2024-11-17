@@ -17,8 +17,8 @@ export const Navbar = ({ username, setUsername }) => {
     <nav className="bg-gray-800 p-4">
       <ul className="flex space-x-4">
         <li><Link to="/homepage" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md">Homepage</Link></li>
-        <li><Link to="/homepage/performance" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md">Performance</Link></li>
-        <li><button onClick={handleSignOut} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md">Sign Out</button></li>
+        <li><Link to="/homepage/performance" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md">Leistung</Link></li>
+        <li><button onClick={handleSignOut} className="text-white hover:bg-gray-700 px-3 py-2 rounded-md">Abmelden</button></li>
       </ul>
     </nav>
   );

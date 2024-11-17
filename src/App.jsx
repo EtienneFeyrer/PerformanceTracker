@@ -23,7 +23,7 @@ const App = () => {
         'Accept': 'application/json'
       }
     }).then(res => res.json());
-    console.log(newData);
+    {/*console.log(newData);*/}
     setReturnData(newData);
   };
 
@@ -34,7 +34,7 @@ const App = () => {
         'Accept': 'application/json'
       }
     }).then(res => res.json());
-    console.log(newData2);
+    {/*console.log(newData2);*/}
     setReturnData2(newData2);
   };
 
@@ -45,7 +45,7 @@ const App = () => {
         'Accept': 'application/json'
       }
     }).then(res => res.json());
-    console.log(DailyMileage);
+    {/*console.log(DailyMileage);*/}
     setDailyMileage(DailyMileage);
   };
 
@@ -56,7 +56,7 @@ const App = () => {
         'Accept': 'application/json'
       }
     }).then(res => res.json());
-    console.log("MonthlyMileage", MonthlyMileage);
+    {/*console.log("MonthlyMileage", MonthlyMileage);*/}
     setMonthlyMileage(MonthlyMileage);
   };
 
@@ -67,7 +67,7 @@ const App = () => {
         'Accept': 'application/json'
       }
     }).then(res => res.json());
-    console.log("TotalMileage", TotalMileage);
+    {/*.log("TotalMileage", TotalMileage);*/}
     setTotalMileage(TotalMileage);
   };
 
@@ -80,21 +80,21 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    console.log('useEffect is running for DailyMileage');
+    {/*console.log('useEffect is running for DailyMileage');*/}
     getDailyMileage('http://localhost:5000/mileage/daily');
-    console.log(DailyMileage);
+    {/*console.log(DailyMileage);*/}
   }, []);
 
   useEffect(() => {
-    console.log('useEffect is running for MonthlyMileage');
+    {/*console.log('useEffect is running for MonthlyMileage');*/}
     getMonthlyMileage('http://localhost:5000/mileage/monthly');
-    console.log(MonthlyMileage);
+    {/*console.log(MonthlyMileage);*/}
   }, []);
 
   useEffect(() => {
-    console.log('useEffect is running for TotalMileage');
+    {/*console.log('useEffect is running for TotalMileage');*/}
     getTotalMileage('http://localhost:5000/mileage/total');
-    console.log(TotalMileage);
+    {/*console.log(TotalMileage);*/}
   }, []);
 
   return (
