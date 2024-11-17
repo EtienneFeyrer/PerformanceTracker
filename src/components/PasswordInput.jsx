@@ -1,14 +1,17 @@
-import Button from "./Button"
-const PasswordInput = ({placeholder, value, onChange}) => {
+import React from 'react';
+
+const PasswordInput = ({ placeholder, value, onChange }) => {
   return (
     <div>
-    <input type="text"
-    placeholder={placeholder}
-    value={value}
-    onChange={onChange}
-    className="input"/>
+      <input 
+        type="password" // Change type to password to mask input
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        className="input"
+      />
     </div>
-  )
-}
+  );
+};
 
-export default PasswordInput
+export default PasswordInput;

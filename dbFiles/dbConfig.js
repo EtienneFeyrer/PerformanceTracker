@@ -4,7 +4,7 @@ const {data} = autoprefixer;
 const config = {
     user: 'Etienne', //Student
     password: 'Etienne2193', //Schule123
-    server: 'DESKTOP-QFCUDM1', //EC2AMAZ-Q9IFEPM,(local),DESKTOP-R2C3227
+    server: 'DESKTOP-R2C3227', //EC2AMAZ-Q9IFEPM,(local),DESKTOP-R2C3227
     database: 'student_tables', //student_tables
     options: {
         trustServerCertificate: true,
@@ -12,6 +12,6 @@ const config = {
         enableArithAbort: true,
         instancename: 'SQLEXPRESS'
     },
-    port: 1443
+    port: 1433
 }
 export default config;
